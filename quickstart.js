@@ -46,6 +46,7 @@
 						log('Successfully established call!');
 						document.getElementById('button-call').style.display = 'none';
 						document.getElementById('button-hangup').style.display = 'inline';
+						document.getElementById('button-mute').style.display = 'inline';
 						volumeIndicators.style.display = 'block';
 						bindVolumeIndicators(conn);
 						connection = conn;
@@ -55,6 +56,7 @@
 						log('Call ended.');
 						document.getElementById('button-call').style.display = 'inline';
 						document.getElementById('button-hangup').style.display = 'none';
+						document.getElementById('button-mute').style.display = 'none';
 						volumeIndicators.style.display = 'none';
 						connection = conn;
 					});
