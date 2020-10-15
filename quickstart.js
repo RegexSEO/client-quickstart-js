@@ -4,11 +4,12 @@
   var outputVolumeBar = document.getElementById('output-volume');
   var inputVolumeBar = document.getElementById('input-volume');
   var volumeIndicators = document.getElementById('volume-indicators');
-
+  
+  var keys = $.getJSON('keys.json');
   var device;
 
   log('Requesting Capability Token...');
-  $.getJSON('https://YOUR_FUNCTION_SUBDOMAIN_HERE.twil.io/capability-token')
+  $.getJSON(keys.functionURL)
     .then(function (data) {
       log('Got a token.');
       console.log('Token: ' + data.token);
